@@ -1,0 +1,7 @@
+config.json
+tsconfig.tsbuildinfo
+dist
+recordings
+.env
+node_modules
+.tmp

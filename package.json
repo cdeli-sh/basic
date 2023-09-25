@@ -1,0 +1,53 @@
+{
+	"name": "basic-voice-bot",
+	"version": "1.0.0",
+	"description": "A proof-of-concept basic voice bot for @discordjs/voice",
+	"main": "dist/bot.js",
+	"scripts": {
+		"start": "npm run build && node dist/main.js",
+		"lint": "prettier --cache --check . && eslint src --ext mjs,js,ts --cache",
+		"format": "prettier --cache --write . && eslint src --ext mjs,js,ts --fix --cache",
+		"build": "rimraf dist && tsc",
+		"build:check": "tsc --noEmit --incremental false",
+		"voices": "say -v"
+	},
+	"keywords": [
+		"discord",
+		"radio",
+		"bot",
+		"audio",
+		"speakers",
+		"hardware",
+		"dj"
+	],
+	"author": "Amish Shah <amish@shah.gg>",
+	"license": "UNLICENSE",
+	"dependencies": {
+		"@discordjs/core": "^1.0.1",
+		"@discordjs/next": "^0.1.1-dev.1673526225-a580768.0",
+		"@discordjs/opus": "^0.9.0",
+		"@discordjs/voice": "^0.16.0",
+		"@picovoice/leopard-node": "^1.2.0",
+		"discord.js": "^14.13.0",
+		"dotenv": "^16.3.1",
+		"libsodium-wrappers": "^0.7.10",
+		"node-crc": "^1.3.2",
+		"openai": "^4.10.0",
+		"prism-media": "^2.0.0-alpha.0",
+		"rss-feed-emitter": "^3.2.3",
+		"say": "^0.16.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.7.0",
+		"@typescript-eslint/eslint-plugin": "^5.36.1",
+		"@typescript-eslint/parser": "^5.36.1",
+		"eslint": "^8.23.0",
+		"eslint-config-marine": "^9.4.1",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-import-resolver-typescript": "^3.5.0",
+		"eslint-plugin-import": "^2.26.0",
+		"prettier": "^2.7.1",
+		"rimraf": "^3.0.2",
+		"typescript": "5.2.2"
+	}
+}
